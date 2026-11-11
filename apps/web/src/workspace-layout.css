@@ -1,0 +1,79 @@
+/* The composer uses available window height; only product thumbnails scroll. */
+.workspace-main.is-creation { padding: 12px 18px; max-width: none; height: 100dvh; overflow: hidden; }
+.is-creation .workspace-with-tasks { height: 100%; min-height: 0; align-items: start; gap: 16px; grid-template-columns: minmax(0, 1fr) 17rem; }
+.is-creation .workspace-content, .is-creation .workspace-content > div:not([hidden]), .creation-workspace { height: 100%; min-height: 0; }
+.is-creation .task-board { top: 0; max-height: 100%; }
+.is-creation .task-board-list { max-height: calc(100dvh - 7rem); }
+.creation-composer { height: 100%; display: flex; flex-direction: column; gap: 12px; padding: 14px; min-height: 0; overflow: auto; }
+.creation-product { flex: 0 0 auto; padding: 10px 12px; border-radius: 16px; }
+.creation-product .panel-header { margin-bottom: 8px; gap: 8px; }
+.creation-product-title { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.creation-product-title h2 { margin: 0; font-size: 18px; }
+.creation-next-hint { font-size: 12px; }
+.creation-product-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.creation-product-tools button { min-height: 36px; font-size: 14px; padding: 4px 12px; }
+.creation-product-tools button svg { width: 18px; height: 18px; }
+.creation-product-tools .save-state { font-size: 12px; }
+.creation-product .uploader { min-height: 76px; height: 76px; padding: 10px 18px; display: grid; grid-template-columns: 36px minmax(0, 1fr); grid-template-rows: 1fr 1fr; gap: 0 12px; justify-content: start; text-align: left; }
+.creation-product .uploader .upload-icon { grid-row: 1 / 3; width: 36px; height: 36px; padding: 6px; }
+.creation-product .uploader strong { font-size: 15px; justify-self: start; align-self: end; }
+.creation-product .uploader small { font-size: 12px; justify-self: start; align-self: start; }
+.creation-product .product-grid { max-height: 148px; overflow-y: auto; }
+.creation-product .product-tile { width: 94px; }
+.creation-product .product-tile img { height: 70px; }
+.creation-product .product-tile select, .creation-product .product-tile button { min-height: 26px; font-size: 12px; }
+.creation-product .product-grid .file-dropzone { flex-basis: 130px; }
+.creation-product .product-grid .file-dropzone .uploader { display: flex; min-height: 132px; height: 132px; padding: 8px; text-align: center; }
+.creation-product .product-grid .file-dropzone .uploader strong, .creation-product .product-grid .file-dropzone .uploader small { align-self: center; }
+.creation-skill-picker { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 240px; gap: 8px; }
+.creation-picker-header { margin: 0; }
+.creation-picker-header h2 { font-size: 18px; margin: 0; }
+.creation-picker-title small { min-height: 24px; min-width: 24px; font-size: 12px; }
+.skill-picker-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.skill-category-tabs { display: flex; gap: 5px; flex-wrap: wrap; }
+.skill-category-tabs button { min-height: 32px; border-radius: 9px; font-size: 12px; padding: 4px 8px; box-shadow: none; gap: 5px; }
+.skill-category-tabs button.active { background: var(--accent-soft); color: var(--link); border-color: var(--focus); }
+.skill-category-tabs button span { font-size: 11px; opacity: .7; font-variant-numeric: tabular-nums; }
+.skill-picker-toolbar input { width: 132px; min-height: 32px; height: 32px; padding: 4px 10px; font-size: 12px; }
+.paged-skill-viewport { flex: 1 1 0; min-height: 150px; min-width: 0; overflow: hidden; padding: 2px; }
+.creation-workspace .paged-skill-grid { display: grid; height: 100%; grid-template-columns: repeat(var(--skill-columns), minmax(0, 1fr)); grid-template-rows: repeat(var(--skill-rows), minmax(0, 1fr)); gap: 10px; }
+.creation-workspace .paged-skill-grid .compact-skill-card { min-height: 0; overflow: hidden; border-radius: 14px; padding: 7px 0 0; gap: 0; }
+.creation-workspace .paged-skill-grid .compact-skill-card:hover { transform: none; }
+.creation-workspace .paged-skill-grid .compact-skill-card .skill-preview-thumb { width: calc(100% - 14px); flex: 1 1 0; min-height: 0; aspect-ratio: auto; height: auto; border-radius: 9px; }
+.creation-workspace .paged-skill-grid .compact-skill-card .skill-preview-thumb img, .creation-workspace .paged-skill-grid .compact-skill-card .skill-preview-thumb video { width: 100%; height: 100%; object-fit: cover; }
+.creation-workspace .paged-skill-grid .compact-skill-card .skill-select-button { flex: 0 0 60px; min-height: 60px; height: 60px; padding: 7px 9px; flex-direction: row; align-items: center; gap: 5px; border-radius: 0 0 14px 14px; white-space: normal; }
+.creation-workspace .paged-skill-grid .compact-skill-card .skill-card-copy { min-height: 0; flex: 1; min-width: 0; }
+.creation-workspace .paged-skill-grid .compact-skill-card .skill-card-title { font-size: 13px; line-height: 1.5; text-align: left; }
+.creation-workspace .paged-skill-grid .compact-skill-card .card-bottom { flex: 0 0 auto; margin-top: 0; }
+.creation-workspace .paged-skill-grid .compact-skill-card .select-mark { width: 23px; height: 23px; }
+.creation-workspace .paged-skill-grid .compact-skill-card .card-meta { top: 12px; right: 12px; }
+.creation-workspace .paged-skill-grid .compact-skill-card .duration { font-size: 11px; padding: 2px 6px; }
+.creation-workspace .paged-skill-grid .skill-preview-empty { gap: 5px; font-size: 12px; }
+.skill-pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 5px; padding-top: 4px; }
+.skill-page-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.skill-page-summary small { font-size: 11px; }
+.skill-pagination .inline { gap: 6px; }
+.skill-pagination button, .skill-pagination select { min-height: 32px; height: 32px; font-size: 12px; padding: 4px 9px; }
+.skill-pagination select { max-width: 112px; }
+.skill-page-jump { display: block; }
+.creation-selection-row { flex: 0 0 auto; margin: 0; padding-top: 6px; border-top: 1px solid var(--line); font-size: 12px; }
+.creation-selection-row .check-label { font-size: 12px; }
+.paged-skill-empty { height: 100%; display: grid; place-items: center; text-align: center; color: var(--muted); font-size: 14px; padding: 24px; background: var(--surface-subtle); border-radius: 14px; }
+@media (max-width: 1300px) {
+  .is-creation .workspace-with-tasks { grid-template-columns: minmax(0, 1fr) 15rem; gap: 12px; }
+  .is-creation .task-board-header { padding: 12px; }
+  .creation-product-tools .save-state, .creation-next-hint { display: none; }
+}
+@media (max-width: 1000px) {
+  .is-creation .workspace-with-tasks { grid-template-columns: minmax(0, 1fr); overflow-y: auto; }
+  .is-creation .workspace-content { height: calc(100dvh - 24px); }
+  .is-creation .task-board { position: static; }
+}
+@media (max-width: 680px) {
+  .workspace-main.is-creation { height: auto; min-height: 100dvh; padding: 8px; overflow: visible; }
+  .is-creation .workspace-content { height: max(640px, calc(100dvh - 180px)); }
+  .creation-composer { padding: 10px; }
+  .creation-product-tools { gap: 5px; }
+  .creation-product-tools button { padding: 4px 8px; }
+  .skill-picker-toolbar input { width: 100%; }
+}

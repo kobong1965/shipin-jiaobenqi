@@ -1,0 +1,117 @@
+{
+  "formatVersion": 1,
+  "version": "0.1.18",
+  "entry": "index.html",
+  "files": [
+    {
+      "path": "assets/AssetLibrary-UTTBM2BB.js",
+      "size": 12222,
+      "sha256": "ec7c87fcddcee96c34f5e9b6ceb2249f1b3c0c7e7d07bf9c6fa1a24ceffa2aaf"
+    },
+    {
+      "path": "assets/CanvasImportModal-MYVPZHVQ.js",
+      "size": 14906,
+      "sha256": "a499497b43cc21779c9d80f3d918c8fd4b286c1dfe66aee0e99ac55248970708"
+    },
+    {
+      "path": "assets/History-TQXNJGGJ.js",
+      "size": 2336,
+      "sha256": "65f9114dac905514b4f7b1c5cfdad3f4fd32ab38550d778e9792def5373dbc1a"
+    },
+    {
+      "path": "assets/ProductCatalog-KLVOBKTS.js",
+      "size": 15421,
+      "sha256": "0703ed13c0777bcb7d985200d3302ce12f7c3b167c3308454e22d8a09024813d"
+    },
+    {
+      "path": "assets/Settings-BJSBYFFB.js",
+      "size": 16316,
+      "sha256": "021a22a034250fe4dca988ce3320e8475f7348b25848288036d7b9e8233fd66d"
+    },
+    {
+      "path": "assets/SkillLibrary-OJRJ6R6Y.js",
+      "size": 12155,
+      "sha256": "bc2299fdac26ce49da8d330f73f1082dee2312edeea8a85cfd8dadf1b217ba3b"
+    },
+    {
+      "path": "assets/TaskResult-PIKRLFPH.js",
+      "size": 16574,
+      "sha256": "972d0cf2ca9f3249f5df2d5038f03fa9a7cc987af4e90a6eb1ea6442c092c16c"
+    },
+    {
+      "path": "assets/brand-logo-B91fdHS5.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb"
+    },
+    {
+      "path": "assets/brand-logo-VPOZNAJ5.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb"
+    },
+    {
+      "path": "assets/chunk-2EZQCH7D.js",
+      "size": 437285,
+      "sha256": "93e241f7e2e21c07b2967381ad37ef84a9e985a71226eb3a06c2a26ce744e005"
+    },
+    {
+      "path": "assets/chunk-7S6E6DJI.js",
+      "size": 5784,
+      "sha256": "d9993efcbb8eebbfa808fa88ae4046b5d5323cc5e50b1dc6884e01cf92c40a15"
+    },
+    {
+      "path": "assets/chunk-BXU24HGY.js",
+      "size": 1713,
+      "sha256": "9b439cb912d6b159a9f1977fb8eb5b3f4942400043f28eb9c8dff691ad0a5d28"
+    },
+    {
+      "path": "assets/chunk-H5JB2IC7.js",
+      "size": 1202,
+      "sha256": "cb17888be4d6b5efce47133a6c7a63553abd887a840da2aca637bd72e3f9fac5"
+    },
+    {
+      "path": "assets/chunk-IXLNIG2N.js",
+      "size": 16081,
+      "sha256": "33f1097d06bcbc90d6049a7e84249527c5ed587972286774c83389a934b07e24"
+    },
+    {
+      "path": "assets/chunk-J5CKUAFT.js",
+      "size": 4700,
+      "sha256": "b459bb4a5d3b25a7e42bf93fa421bc877d2d4032f1ab6a38510d0da0dfe6aadb"
+    },
+    {
+      "path": "assets/chunk-OCKDIJSC.js",
+      "size": 5280,
+      "sha256": "7d50fbf382873de5bc34c3d716418b67ea08ae57c67ae858256d4768d63d43f6"
+    },
+    {
+      "path": "assets/chunk-P2FYKYUC.js",
+      "size": 4363,
+      "sha256": "80d37420487887327529947dbfce2b758e5d135bbb73c2b4330f5170c45ebbfc"
+    },
+    {
+      "path": "assets/chunk-SNJ27PKF.js",
+      "size": 1164,
+      "sha256": "e711b4dfb1ddb9bd6883e032c37ce1dadec1cade4957b95e6472a3b9c6537cf9"
+    },
+    {
+      "path": "assets/chunk-VNCJXXIL.js",
+      "size": 1272,
+      "sha256": "b453369cd5f32fd975accd2e29505dd9704403023b0c36d683671c1f36d6b7db"
+    },
+    {
+      "path": "assets/workbench-apple-3277290993.css",
+      "size": 94888,
+      "sha256": "32772909934e19bef5a358c5fdf2d2d1d5bddd5809c1d32ec98e5126dec5cae0"
+    },
+    {
+      "path": "assets/workbench-apple-34e6ef8f63.js",
+      "size": 237247,
+      "sha256": "34e6ef8f6305ab78be9cbc25ee39d5290795894be5571536210a477a9c04ab3e"
+    },
+    {
+      "path": "index.html",
+      "size": 474,
+      "sha256": "f64fc1278a63ba3633df423204d7c6c05cf964d080d16c4c9abc0bf5900067f7"
+    }
+  ]
+}

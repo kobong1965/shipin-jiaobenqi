@@ -1,0 +1,262 @@
+/* Compact task board and consistent Apple-style system typography. */
+:root {
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "PingFang SC", "Helvetica Neue", "Segoe UI Variable Text", "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+  --font-heading: var(--font-body);
+  --font-data: var(--font-body);
+  --weight-heading: 600;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: tabular-nums;
+}
+
+body, button, input, textarea, select, option, code, pre, kbd, samp {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.task-board {
+  border-radius: 18px;
+  background: var(--surface-subtle);
+  box-shadow: 0 2px 12px #25283d04;
+}
+
+.task-board .task-board-header {
+  min-height: 56px;
+  gap: 8px;
+  padding: 10px 12px;
+}
+
+.task-board .task-board-header > div {
+  gap: 5px;
+  min-width: 0;
+}
+
+.task-board .task-board-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.015em;
+}
+
+.task-board .task-board-header .tag {
+  padding: 2px 6px;
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.task-board .task-board-header > button {
+  min-height: 32px;
+  padding: 4px 9px;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.task-board .task-board-header > button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.task-board .task-board-list {
+  gap: 8px;
+  padding: 8px;
+  scrollbar-width: thin;
+}
+
+.task-board .task-card {
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: 98px minmax(0, 1fr);
+  gap: 8px;
+  min-height: 96px;
+  padding: 9px;
+  border-radius: 12px;
+  box-shadow: none;
+  background: var(--paper);
+}
+
+.task-board .task-card.selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px #5264d91a;
+}
+
+.task-board .task-media-pair {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  --task-thumb-width: 44px;
+  --task-thumb-height: 56px;
+  width: 98px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 6px;
+}
+
+.task-board .task-media-item {
+  gap: 3px;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.task-board button.task-media-item {
+  pointer-events: auto;
+}
+
+.task-board .task-media-frame {
+  height: 56px;
+  border-radius: 7px;
+}
+
+.task-board .task-media-caption {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.task-board .task-media-empty {
+  gap: 3px;
+  font-size: 10px;
+}
+
+.task-board .task-media-empty svg {
+  width: 16px;
+  height: 16px;
+}
+
+.task-board .task-script-strip {
+  gap: 4px;
+  scrollbar-width: thin;
+}
+
+.task-board .task-script-index {
+  top: 2px;
+  right: 2px;
+  padding: 0 3px;
+  font-size: 9px;
+  line-height: 14px;
+  border-radius: 4px;
+}
+
+.task-board .task-card-body {
+  display: grid;
+  grid-column: 2;
+  align-self: center;
+  justify-items: start;
+  gap: 5px;
+  min-width: 0;
+  align-items: start;
+  align-content: center;
+}
+
+.task-board .task-state {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  gap: 4px;
+  max-width: 100%;
+  min-height: 22px;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.task-board .task-state::before {
+  content: none;
+}
+
+.task-board .task-state svg {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  stroke-width: 2;
+}
+
+.task-board .task-state-complete {
+  background: #79ed99;
+  border-color: #69db89;
+  color: #14532d;
+}
+
+.task-board .task-state-incomplete {
+  background: #454851;
+  border-color: #454851;
+  color: #f4f5f7;
+}
+
+.task-board .task-card-open {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 98px minmax(0, 1fr);
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 9px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  text-align: left;
+  box-shadow: none;
+}
+
+.task-board .task-card-open:hover:not(:disabled),
+.task-board .task-card-open:active:not(:disabled) {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.task-board .task-card-open:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -3px;
+}
+
+/* Match workspace-layout's breakpoints without changing its single-column mode. */
+@media (min-width: 1001px) {
+  .is-creation .workspace-with-tasks {
+    grid-template-columns: minmax(0, 1fr) 14.5rem;
+    gap: 12px;
+  }
+
+  .is-creation .task-board .task-board-list {
+    max-height: calc(100dvh - 5.25rem);
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 68.001rem) {
+  .workspace-with-tasks:not(.without-tasks) {
+    grid-template-columns: minmax(0, 1fr) 14.5rem;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .is-creation .workspace-with-tasks {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .task-board .task-board-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

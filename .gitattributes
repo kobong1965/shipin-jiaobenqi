@@ -1,0 +1,2 @@
+# Preserve the exact snapshot bytes, including historical line endings and frozen assets.
+* -text

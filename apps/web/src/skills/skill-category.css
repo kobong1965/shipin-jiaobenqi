@@ -1,0 +1,19 @@
+.skill-category-filter { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.skill-category-filter button { min-height: 36px; padding: 7px 13px; gap: 7px; font-size: 14px; white-space: nowrap; }
+.skill-category-filter button.active { color: var(--accent); background: #eeedff; border-color: #bcb8ff; box-shadow: none; }
+.skill-category-count { font-family: var(--font-data); color: var(--muted); font-size: 12px; }
+.skill-category-select { display: flex; flex-direction: column; gap: 6px; min-width: 0; font-size: 14px; }
+.skill-category-select select { width: 100%; min-width: 0; }
+.skill-library-category-bar { margin: -4px 0 20px; }
+.skill-library-card .skill-category-select { margin-top: 14px; margin-bottom: 14px; }
+.skill-library-card .skill-category-select span { color: var(--muted); }
+.skill-library-card .skill-category-select select { min-height: 38px; padding-top: 6px; padding-bottom: 6px; }
+.skill-library-card .card-bottom { margin-top: auto; }
+.skill-library-filter-empty { padding: 36px 16px; text-align: center; color: var(--muted); }
+.skill-library-filter-empty button { margin-top: 12px; }
+.skill-library-detail-category { margin-top: 18px; max-width: 24rem; }
+.skill-library-preview { position: relative; display: block; width: 100%; height: 210px; padding: 0; margin: 0 0 16px; border-radius: 12px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.skill-library-preview.missing-cover { display: grid; place-items: center; font-size: 14px; color: var(--muted); border-style: dashed; }
+.skill-library-preview .skill-thumbnail-media { width: 100%; height: 100%; }
+.skill-library-preview .skill-thumbnail-media img, .skill-library-preview .skill-thumbnail-media video { width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: contain; }
+.library-cover-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 44px; height: 44px; padding-left: 3px; border-radius: 50%; background: #202536b3; color: white; border: 1px solid #ffffffb3; }

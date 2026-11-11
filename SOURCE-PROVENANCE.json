@@ -1,0 +1,2825 @@
+{
+  "formatVersion": 1,
+  "version": "0.1.18",
+  "baseCommit": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+  "installationRelease": {
+    "id": "9f6d7c3a-07f2-4baa-a8c9-7ea4b21c7e65",
+    "version": "0.1.18"
+  },
+  "notes": [
+    "Frozen web is the exact active installation interface and is the release reference.",
+    "Frontend source comes from server/ui-source/apps/web; backend packages come from the actual installation, not its older ui-source package duplicates.",
+    "custom-ui-source contains archived pure UI customization code; the older style-picker injection is superseded by ProductSetPicker.tsx.",
+    "The historical desktop source declares assembly version 0.1.16.0 despite the release version 0.1.18; byte-for-byte native rebuild has not been established.",
+    "Native branding uses the active installation workbench.ico and logo-transparent.png. Both reachable frozen web logo filenames and apps/web source logo contain the same active purple branding image.",
+    "Historical customization build scripts retain their original installation-relative layout and are archival; they are not the default source or release build.",
+    "Publication integration adds README, private archive notice, preserved UI verification/build entry and CI; npm build:source retains the historical editable frontend build.",
+    "Git attributes preserve exact file bytes across checkouts, including the frozen assets and historical source line endings."
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 98,
+      "sha256": "59412ec64cddb04f45fdc8c206bb072adb1afa48d16d40adbb7024358011e590",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": ".github/workflows/preserved-ui.yml",
+      "size": 331,
+      "sha256": "2b776637f77ecb5516e1feae9585f99e8b89a43e69e93d074a893466aec08f9b",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": ".gitignore",
+      "size": 859,
+      "sha256": "2621eafe3ad4706575267104f0008e5dcafcee0f8ad5eca27668b00d2b7f992d",
+      "source": {
+        "kind": "publication-integration",
+        "original": {
+          "kind": "git",
+          "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+          "path": ".gitignore"
+        },
+        "originalSha256": "2f292be7be1496e8b4528e00b19654b425cf6392e3fb8e4b35a53505d836d254"
+      }
+    },
+    {
+      "path": "apps/api/app.ts",
+      "size": 3815,
+      "sha256": "ef9779b82bc93ec0a7ec729607eb46725b3963f1b6e66ce13df9be55eff19f9a",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/app.ts"
+      }
+    },
+    {
+      "path": "apps/api/asset-service.ts",
+      "size": 2859,
+      "sha256": "5ec83bcab641b98c740ffc0971dbf913b477d41cf85acd3f526db5113b914249",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/asset-service.ts"
+      }
+    },
+    {
+      "path": "apps/api/assets.ts",
+      "size": 11245,
+      "sha256": "2ee23067af71d54f635db3d7e97b08c43e4358afa98446a9910d63d806d2c2ba",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/assets.ts"
+      }
+    },
+    {
+      "path": "apps/api/auth.ts",
+      "size": 4340,
+      "sha256": "eb9be3b9fa0aed31f9f70cabd065aae33bbce191783ed8db25ce20c156702cef",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/auth.ts"
+      }
+    },
+    {
+      "path": "apps/api/canvas.ts",
+      "size": 10072,
+      "sha256": "60d0a520a79bb34174bf81ad243f9cd6e99acec27bc23ca0dee81ad721e8ff52",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/canvas.ts"
+      }
+    },
+    {
+      "path": "apps/api/catalog-selection-store.ts",
+      "size": 8288,
+      "sha256": "9e069dfe776a9bfa1f4c929346cd2a96ea6500215ee1c5415ed1c951cff056f2",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/catalog-selection-store.ts"
+      }
+    },
+    {
+      "path": "apps/api/context.ts",
+      "size": 1161,
+      "sha256": "d9ffc680a86cf60e827d1af26d10e9611fdbfb05414b1029ec84b99889af32ac",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/context.ts"
+      }
+    },
+    {
+      "path": "apps/api/drafts.ts",
+      "size": 2580,
+      "sha256": "5ca29f50ff03e8114fa9eb910393eb2fe21107ed7b012aeb2c7d6a6ca9f8e3f4",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/drafts.ts"
+      }
+    },
+    {
+      "path": "apps/api/exports.ts",
+      "size": 2909,
+      "sha256": "9635008f5c63fc88e2c010540362e60869e7932d2ae33a24b5edc173fd4062d0",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/exports.ts"
+      }
+    },
+    {
+      "path": "apps/api/job-actions.ts",
+      "size": 4227,
+      "sha256": "fa403e6c60b846227334e0b095d2e472e6af66bc3f34f177bb9802d670f3f96f",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/job-actions.ts"
+      }
+    },
+    {
+      "path": "apps/api/main.ts",
+      "size": 1276,
+      "sha256": "64b8cf2afa5cb86fd4af972131e8ed3fe5db91f55a5feb8583bc4c9e8ee34ff1",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/main.ts"
+      }
+    },
+    {
+      "path": "apps/api/media.ts",
+      "size": 2570,
+      "sha256": "35c58cb86399a8e98f38a592f07230b98cfa1a721d5b015c8856a81108134a2b",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/media.ts"
+      }
+    },
+    {
+      "path": "apps/api/product-catalog-schema.ts",
+      "size": 2331,
+      "sha256": "32dfd0b9d74d2025304f4ec0602badf7c6cb11d683736618de63b2c3509aead1",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/product-catalog-schema.ts"
+      }
+    },
+    {
+      "path": "apps/api/product-catalog-store.ts",
+      "size": 15220,
+      "sha256": "a27d87cfb0cf06b7c885516085c4fb5482c329d134827bd7fe9e7cbb50de94bf",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/product-catalog-store.ts"
+      }
+    },
+    {
+      "path": "apps/api/product-catalog.ts",
+      "size": 4270,
+      "sha256": "ad981f671994556203298dd4af59589aa784115b7462962dc349fc31f0362b0e",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/product-catalog.ts"
+      }
+    },
+    {
+      "path": "apps/api/product-sets.ts",
+      "size": 11644,
+      "sha256": "67714540d866d06359931a99d5ca4865b7e64e5ea0c432c623074e444cd80dc6",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/product-sets.ts"
+      }
+    },
+    {
+      "path": "apps/api/runtime.ts",
+      "size": 1500,
+      "sha256": "dececfe1e477610b10555ed34b4c8ded55ad89edc24ccac951bae404169ddaae",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/runtime.ts"
+      }
+    },
+    {
+      "path": "apps/api/settings.ts",
+      "size": 8097,
+      "sha256": "81c05eb3438b710e35ea69f3b8a0f3ac22690afb72c97e6e7ca0c37082c76eeb",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/settings.ts"
+      }
+    },
+    {
+      "path": "apps/api/skills.ts",
+      "size": 12295,
+      "sha256": "3e37cdcad26fc8dba1eef124a71c2c8a038ea6f91a49dca4107beccd8fa78f8d",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/skills.ts"
+      }
+    },
+    {
+      "path": "apps/api/task-previews.ts",
+      "size": 3156,
+      "sha256": "756bef847d719bdcb8a76ca8c271af315f7e8503dfbcea2b21aa69b629cb31a4",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/task-previews.ts"
+      }
+    },
+    {
+      "path": "apps/api/task-service.ts",
+      "size": 4980,
+      "sha256": "74dfdc9808ba3b0857fbba5a2b33d6c81785dd986105cdd523ec6a836d396765",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/task-service.ts"
+      }
+    },
+    {
+      "path": "apps/api/tasks.ts",
+      "size": 12871,
+      "sha256": "f5e08e346ad8ca3421b69dd668d276f67057a9f162b6e607a3383d8476c55c24",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/api/tasks.ts"
+      }
+    },
+    {
+      "path": "apps/web/index.html",
+      "size": 386,
+      "sha256": "d8f37db32194b634031c2ba01f8dce288317a1b5c69fa25515d574afc4bda373",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/index.html"
+      }
+    },
+    {
+      "path": "apps/web/src/admin/provider-pool.ts",
+      "size": 2739,
+      "sha256": "fd60de7a110588836e6dfdbab9fe0607e170fb84a835106658a090d253c0abcb",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/admin/provider-pool.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/admin/ProviderPool.tsx",
+      "size": 8440,
+      "sha256": "93e74603fb0e9cc6a8647f1b326d1d7c1bda07cfef5d483cc794d8f06de22890",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/admin/ProviderPool.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/admin/settings.css",
+      "size": 1068,
+      "sha256": "35f41361c9a60106697c1c870e7b2418ad1bdbeb8c5e8fd11ad6d9811efa5b18",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/admin/settings.css"
+      }
+    },
+    {
+      "path": "apps/web/src/admin/Settings.tsx",
+      "size": 6824,
+      "sha256": "fcb510906f4017bd68c7e1447ccb806060ad8346bfa7dbcfbbd25ccfe9603360",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/admin/Settings.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/api.ts",
+      "size": 1134,
+      "sha256": "1dd2372ac2df16f49d4ce3690e171330467cff73da398e2790b5cd3b50d50074",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/api.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/App.tsx",
+      "size": 9497,
+      "sha256": "b9092860d3951f81456c18b3f4b86465c4cb15100c00394ef6e8fd04d7381d59",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/App.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/apple-compact.css",
+      "size": 5165,
+      "sha256": "243617d238e9197741c65b87d1d0b8875a212f957edd856fb388c1cbbfead2d8",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/apple-compact.css"
+      }
+    },
+    {
+      "path": "apps/web/src/assets/AssetLibrary.tsx",
+      "size": 4966,
+      "sha256": "99797ae3b42f3178723d72aa16dec5d04e795d8733c747c7169d8a5853d76dea",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/assets/AssetLibrary.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/assets/brand-logo.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/assets/brand-logo.png"
+      }
+    },
+    {
+      "path": "apps/web/src/assets/product-sets.css",
+      "size": 3808,
+      "sha256": "7e30a4d4b6924bb9e75fd040853e6c06e61cfadd70bf9ac9c54c5360eb71123d",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/assets/product-sets.css"
+      }
+    },
+    {
+      "path": "apps/web/src/assets/ProductSetEditor.tsx",
+      "size": 4432,
+      "sha256": "817ec42461304ebe32632d3e22f1874a7ba433b23123da3470ed725040c2349a",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/assets/ProductSetEditor.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/assets/ProductSetLibrary.tsx",
+      "size": 4852,
+      "sha256": "c3f9c399adcd5991bfebc31956f63f2611d85a859649a5258ad29d8e6bc097ea",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/assets/ProductSetLibrary.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/Auth.tsx",
+      "size": 3230,
+      "sha256": "50284ebb52d8dca799df684f5353ff9a9f4f3048151eba11be5530fd971e3531",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/Auth.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/BrandLogo.tsx",
+      "size": 196,
+      "sha256": "ae9ed6c3b7c7290191115041c42e8da0c72bcc4f09436ac6a3005ebc0a272044",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/BrandLogo.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/canvas/canvas.css",
+      "size": 11574,
+      "sha256": "f64dd38514b3fccc423c8b20f5282c68a466ab92107e4c6ff52241e10c2fb5f6",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/canvas/canvas.css"
+      }
+    },
+    {
+      "path": "apps/web/src/canvas/CanvasImportModal.tsx",
+      "size": 16814,
+      "sha256": "5a8a9142c8700b1c96a796c2104b0d42425152fcc3dffade3565bab75ae90641",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/canvas/CanvasImportModal.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/catalog/catalog.css",
+      "size": 8999,
+      "sha256": "7183f74e6c8a7fba10614d436794532281e0ca06b88495cdb6bbd6f56d30c6f8",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/catalog/catalog.css"
+      }
+    },
+    {
+      "path": "apps/web/src/catalog/CatalogDetail.tsx",
+      "size": 4507,
+      "sha256": "3edbcf20764d9d22c63e51bb51d9acd3c3d7615cbdfcdd476e8f83a4d457d4b4",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/catalog/CatalogDetail.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/catalog/CatalogMedia.tsx",
+      "size": 3750,
+      "sha256": "37d33ddab66939edb6ab19b6de26dc775d86df4ec9b0ff0c830c4cad7eec1498",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/catalog/CatalogMedia.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/catalog/presentation.ts",
+      "size": 1942,
+      "sha256": "67a0eeaef7da851138e89c2da311e258cd76574298349cdce872e7517c1ae1f3",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/catalog/presentation.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/catalog/ProductCatalog.tsx",
+      "size": 7996,
+      "sha256": "25772c1d65d371e406cb70d9c89b5624ab4c32081a00d14264a3491604afa73a",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/catalog/ProductCatalog.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/controls.css",
+      "size": 2995,
+      "sha256": "11826941205f58ba389ffebd077f371d3035f926ecebd0a86503cc8b3fdadb77",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/controls.css"
+      }
+    },
+    {
+      "path": "apps/web/src/create/creation.css",
+      "size": 11948,
+      "sha256": "b7ff5bcc06e4b4a171a2347c546aff253b3bd90fdcb26b061df11f8a300757f4",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/creation.css"
+      }
+    },
+    {
+      "path": "apps/web/src/create/Creation.tsx",
+      "size": 17513,
+      "sha256": "23950d7fa829cc0af6adaf0c977d9be501362b21f5559ea6b6b11ab5773f3fc2",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/Creation.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/CreationSettings.tsx",
+      "size": 3401,
+      "sha256": "e0c007acd4be5bb136fe692f493fca2b792011097d9d024e401e28712745ec62",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/CreationSettings.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/PaginatedSkills.tsx",
+      "size": 4452,
+      "sha256": "2b8cae47ea186bb80118121637cba09ee2571d4467d9906988f706acf5e45824",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/PaginatedSkills.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/product-groups.css",
+      "size": 1350,
+      "sha256": "ed1e8d01a8d8189d950406c868e2ddccf90d31495f18ae6842546437e3eb5a50",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/product-groups.css"
+      }
+    },
+    {
+      "path": "apps/web/src/create/product-set-picker.css",
+      "size": 9610,
+      "sha256": "0ba8fad94622870d635b57d473c3fcba869a461f63c4593a14de03a2ff9e40c8",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/product-set-picker.css"
+      }
+    },
+    {
+      "path": "apps/web/src/create/ProductChoiceGrid.tsx",
+      "size": 1467,
+      "sha256": "bf017b8a12de7e633916c61ac23471a60edd84cfaa99e35bf06973c561139f7f",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/ProductChoiceGrid.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/ProductGroups.tsx",
+      "size": 2557,
+      "sha256": "237f1f86c9aee711dbbe2379465d029540555d1db6aaf6c4abb724709d09d291",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/ProductGroups.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/ProductSetPicker.tsx",
+      "size": 11068,
+      "sha256": "537e9471dbb6f19595273c6856baa6820fad338191d61c5c7a1c65b52e759439",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/ProductSetPicker.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/SelectedSkills.tsx",
+      "size": 1853,
+      "sha256": "e76dd75aa3ffc5ef9b06c65db0313e18acbd8a9a5310be9bde0cfd67ab3e6eb1",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/SelectedSkills.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/SkillSelectionCard.tsx",
+      "size": 2479,
+      "sha256": "5b16181de543a68eb93279f458791ac68c7028fd7ff8f3a831eca9ed619cfcb6",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/SkillSelectionCard.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/create/useDraft.ts",
+      "size": 1881,
+      "sha256": "9cedee118f830d3c8efe0b47cf258b112bd62285bcb469fa849cac84bd9b844f",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/useDraft.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/create/useReferenceVideoRequirement.ts",
+      "size": 2270,
+      "sha256": "dc2b8b5c9135d0d1439a71356f36d4850e966dd650e56d673082666da76daea9",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/create/useReferenceVideoRequirement.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/design-tokens.css",
+      "size": 2139,
+      "sha256": "ce36a92e528fdf0a07a1f7bdfc98d83d72853ab67313fbba223afe99b0d57456",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/design-tokens.css"
+      }
+    },
+    {
+      "path": "apps/web/src/history/history.css",
+      "size": 369,
+      "sha256": "60ed6ff413d01fa45e3e683ab1b00e5f742f21e83e02943286440ccf5fa274f9",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/history/history.css"
+      }
+    },
+    {
+      "path": "apps/web/src/history/History.tsx",
+      "size": 2460,
+      "sha256": "8603ad559af48312312bfc4d5313a70e7546998a0ccdcf32f6d97e0c977bbf78",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/history/History.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "size": 223,
+      "sha256": "cb0999e6cb16550ca4805e8d73a606d34b40e5d0036d7e55e1d278f9f6f1fd84",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/main.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/products/catalog-identity.css",
+      "size": 801,
+      "sha256": "9a407a60c519c00dac513ded53aec03a264c94bac69cf787113b5cf425ff973e",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/products/catalog-identity.css"
+      }
+    },
+    {
+      "path": "apps/web/src/products/CatalogIdentitySummary.tsx",
+      "size": 1155,
+      "sha256": "c998538edca8f8122a19ed466c89dcec97547f87b15c97c0b5089917a5534dbf",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/products/CatalogIdentitySummary.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/products/picker-options.ts",
+      "size": 4431,
+      "sha256": "9a3b9d37517f1dd049560527ceeba3b51bfccd70a38b931a954359705351c594",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/products/picker-options.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/products/product-choice.ts",
+      "size": 1278,
+      "sha256": "8e6cc6e2fe7831ce895918cb99ed1f81bcd13045c5a10a1f3681ae2e4c165fd2",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/products/product-choice.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/products/product-set-selection.ts",
+      "size": 6579,
+      "sha256": "424dc7aff8952daab54b8ccf4a7e19077369b2e14c2a88f6e23b77f10856b9b6",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/products/product-set-selection.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/results/AssetReview.tsx",
+      "size": 9000,
+      "sha256": "81f03f3f793c26fe615dfd0abb9ca18fc651935ca859351e712a9dc7ad7746d7",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/AssetReview.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/results/ExportPanel.tsx",
+      "size": 6441,
+      "sha256": "56cb37aefa9bfd7cba869b7255d85d9ae0be3bb653bbc56b8c8dd5f8bee509ae",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/ExportPanel.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/results/prompt-document.ts",
+      "size": 3382,
+      "sha256": "fcecac776310c13d3a4326887bf92f4cf0b53cad22563c21253340203f93eb41",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/prompt-document.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/results/PromptEditor.tsx",
+      "size": 3653,
+      "sha256": "10318ed0992382927ae45417fc8ad0b6a3590e9dd725bb88ac30f0296e97883a",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/PromptEditor.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/results/result-editor.css",
+      "size": 2706,
+      "sha256": "d73c88854b23dcd3388cfe4defa458496dd54d83c065c32fa20bc6b0271cf77f",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/result-editor.css"
+      }
+    },
+    {
+      "path": "apps/web/src/results/TaskResult.tsx",
+      "size": 11253,
+      "sha256": "0846ade8992bbfa5cad91afd73dc6d4ae3011123f4701ac07138fab1f6531054",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/results/TaskResult.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/ReferenceVideoNotice.tsx",
+      "size": 1901,
+      "sha256": "6685ea0b4cbd5608b4593726d61b93a49e7159434045b9bae7cc281d8c2f79b8",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/ReferenceVideoNotice.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/skill-category.css",
+      "size": 2094,
+      "sha256": "d4b4ada2d137cd4b6b5a4fbdefe402c0289d9dad72a52eef27f73d495569e6b3",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/skill-category.css"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/skill-preview.ts",
+      "size": 115,
+      "sha256": "ceb2c73d6664f78973488090909a1b6beae6b4b0589c06ec1788b5af3297c84b",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/skill-preview.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/SkillCategory.tsx",
+      "size": 2694,
+      "sha256": "159d8f86681e1c428da2b028e4d74cc544c5c7657f8386ffe75ad02c18cfc2fa",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/SkillCategory.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/SkillImport.tsx",
+      "size": 5618,
+      "sha256": "b5a76bc784531252af10081b94c7deae504ba22a4d5090bdb7e139683ba31a6a",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/SkillImport.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/SkillLibrary.tsx",
+      "size": 8642,
+      "sha256": "29772cf9f78d81ec43f1e38836e20d38ae4cf1bb19a09c17ed16ffb73ff5ee7e",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/SkillLibrary.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/SkillPreviewModal.tsx",
+      "size": 1821,
+      "sha256": "4c154b13562a52a015fc5e98ed686925df10e2d00aa59dadc9e72232972c2d8a",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/SkillPreviewModal.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/skills/SkillThumbnail.tsx",
+      "size": 3066,
+      "sha256": "1caa31e73241f582b968dd4b0d2d050ff6e394c06a791d94b9d8d797dcc401c1",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/skills/SkillThumbnail.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/canvas-upload-status.css",
+      "size": 516,
+      "sha256": "141b474ca7e176900e291abc2381d49837fb40f4501fefadaf5fd4563c22e4bb",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/canvas-upload-status.css"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/CanvasUploadBadge.tsx",
+      "size": 1619,
+      "sha256": "cd1d16039ecf485c08baa4502aeff16ae953bfda287a466f3bc94024f45b3466",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/CanvasUploadBadge.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/task-display-status.ts",
+      "size": 1183,
+      "sha256": "6d0236165310bd11b486f75d49355422513aa1004585b8de844afa2e8cea7fd0",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/task-display-status.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/task-media.css",
+      "size": 1748,
+      "sha256": "dcf30b4f7b286b5a315dbbb6edf138167d8fc1b8440bf4e8324ae8996d5386f7",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/task-media.css"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/task-routing.ts",
+      "size": 651,
+      "sha256": "83079af4f2f1d307d29b687ad6de7c6b08ce600470a560b693f6c2e294de7c76",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/task-routing.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/TaskBoard.tsx",
+      "size": 3431,
+      "sha256": "c062a22305dacdcb238b66af461b8fbec0bffc2fe04b7e3e604070d66a674484",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/TaskBoard.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/TaskMedia.tsx",
+      "size": 3210,
+      "sha256": "ce223c04c21454ccda4e6a7d34b810a45cc61713455e71a94d58235c545175cc",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/TaskMedia.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/tasks.css",
+      "size": 3405,
+      "sha256": "f7452bcd2d6f1eead7d3b235371ae300a2ec58fd079a23aab16d2554354c5e79",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/tasks.css"
+      }
+    },
+    {
+      "path": "apps/web/src/tasks/use-task-summaries.ts",
+      "size": 1186,
+      "sha256": "6274d0e33f69fc24a3ba2c6ecda766f5f1b6a7e1341e3a6ebb8d84d78943c554",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/tasks/use-task-summaries.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/theme.css",
+      "size": 30136,
+      "sha256": "6772a7b3d3b38ca3de05eeb5c084c665b7a421fb609955a301ab3b395fd0a221",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/theme.css"
+      }
+    },
+    {
+      "path": "apps/web/src/ui.tsx",
+      "size": 5857,
+      "sha256": "39646edb37f126205ceb03b71bf01bef2e27046d2847a65ead302c9cd5257b66",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/ui.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/uploads/file-upload.ts",
+      "size": 2560,
+      "sha256": "a929cf287e99bb2e82dce0c543b23fde7563691ee7ffb95fdc4c363b95c2a50f",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/uploads/file-upload.ts"
+      }
+    },
+    {
+      "path": "apps/web/src/uploads/FileDropzone.tsx",
+      "size": 4412,
+      "sha256": "640d4c59adb14093bbefa994ead5452fb6b244f1e7ad95591e9bd56eb06e972e",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/uploads/FileDropzone.tsx"
+      }
+    },
+    {
+      "path": "apps/web/src/workspace-layout.css",
+      "size": 7322,
+      "sha256": "0e553b5e34b26b842fd1287c2762a80983b8232bdc03b2a08f5353fd36c9df4e",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/workspace-layout.css"
+      }
+    },
+    {
+      "path": "apps/web/src/workspace.tsx",
+      "size": 2295,
+      "sha256": "97c54b4b8233a8bd8ab1959680d9c0bbf58030589863fa94b7600081bdd765d7",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/src/workspace.tsx"
+      }
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "size": 565,
+      "sha256": "8f0ad77620432a6dad0eb8d7a79288b5ab4720d6fe2556b7c2144bf0c1b70b73",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/apps/web/vite.config.ts"
+      }
+    },
+    {
+      "path": "apps/worker/main.ts",
+      "size": 622,
+      "sha256": "c9684b601a3b87e83d3f1c148a8dfe93a60f5982c29e264be091adaa37b2068f",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/worker/main.ts"
+      }
+    },
+    {
+      "path": "apps/worker/pool.ts",
+      "size": 2493,
+      "sha256": "5857c978cd91323eee4fd0284edcd689f8a1d99f4e3443c24c5e9673741cfa6c",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/worker/pool.ts"
+      }
+    },
+    {
+      "path": "apps/worker/queue.ts",
+      "size": 14381,
+      "sha256": "940bb5c684c54f79e3d20052674bb70f8f2ab6a634b270d8f892d6379c92825c",
+      "source": {
+        "kind": "installation",
+        "path": "server/apps/worker/queue.ts"
+      }
+    },
+    {
+      "path": "custom-ui-source/apple-compact.css",
+      "size": 5165,
+      "sha256": "243617d238e9197741c65b87d1d0b8875a212f957edd856fb388c1cbbfead2d8",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/apple-compact.css"
+      }
+    },
+    {
+      "path": "custom-ui-source/build-product-set-editor.mjs",
+      "size": 3025,
+      "sha256": "4ec6932219ce20022d89838f68058cd43349fd610b3048978bb18da4f49193e7",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/build-product-set-editor.mjs"
+      }
+    },
+    {
+      "path": "custom-ui-source/build-style-picker.mjs",
+      "size": 3968,
+      "sha256": "f7e659c3c51edf902e941e9e6eec18e0bbed8b08e83fd2a2a186275594997222",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/build-style-picker.mjs"
+      }
+    },
+    {
+      "path": "custom-ui-source/build-ui-original.mjs",
+      "size": 1665,
+      "sha256": "fd3d63d4a352df2a43b02d648f9033b1c2f7c752dfe245e240c7c4e626385fcd",
+      "source": {
+        "kind": "installation",
+        "path": "server/ui-source/build-ui.mjs"
+      }
+    },
+    {
+      "path": "custom-ui-source/product-set-editor.jsx",
+      "size": 4687,
+      "sha256": "381cb89d3ff792949341c84a160707bcb64b7972a847195d330137234761b456",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/product-set-editor.jsx"
+      }
+    },
+    {
+      "path": "custom-ui-source/style-picker-dialog.jsx",
+      "size": 853,
+      "sha256": "05485bd76ba8814694fb85b67ca13ab883035b3f58931044dae0a64c0a54db5c",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/style-picker-dialog.jsx"
+      }
+    },
+    {
+      "path": "custom-ui-source/style-picker.css",
+      "size": 4388,
+      "sha256": "3e76fa0aabc0d9271c25ea015dc97315133c23891f0550d67bd52a20695b70da",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/style-picker.css"
+      }
+    },
+    {
+      "path": "custom-ui-source/style-picker.jsx",
+      "size": 9890,
+      "sha256": "5337c6e52f9388c04d0e28995a05400cda6584392833942d9fb26b2664071698",
+      "source": {
+        "kind": "installation",
+        "path": "ui-customizations/style-picker.jsx"
+      }
+    },
+    {
+      "path": "database/migrations/001-core.sql",
+      "size": 1295,
+      "sha256": "754a23d7c7a7d2499344ad6facf13815010aaba5c33be07713c2162f757a4933",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/001-core.sql"
+      }
+    },
+    {
+      "path": "database/migrations/002-skills.sql",
+      "size": 1032,
+      "sha256": "53ef8e9da8ca1e5fb838dcbf60b3bb43e9c2185fa28b2215f3607da891db49c9",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/002-skills.sql"
+      }
+    },
+    {
+      "path": "database/migrations/003-tasks.sql",
+      "size": 2897,
+      "sha256": "1d57f6a0dc8c1e2db4f26539cc9058846765318c3a0f31f4dbe5686bc452e60c",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/003-tasks.sql"
+      }
+    },
+    {
+      "path": "database/migrations/004-asset-dependencies.sql",
+      "size": 72,
+      "sha256": "d5ffc665331fa2878d6e4a590e8a8f8c1642a3ffb0ff141b20b86244f0210f3b",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/004-asset-dependencies.sql"
+      }
+    },
+    {
+      "path": "database/migrations/005-attempt-provider.sql",
+      "size": 70,
+      "sha256": "f8ea4276bc46111bcb72f31498d303e4dcb5e036b643ad4564af56f1034a004b",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/005-attempt-provider.sql"
+      }
+    },
+    {
+      "path": "database/migrations/006-binding-dependencies.sql",
+      "size": 130,
+      "sha256": "627c8bfc6f723a1b40fdda96df81156b7c2b4f98c24c9e31f8652e784d7b0b65",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/006-binding-dependencies.sql"
+      }
+    },
+    {
+      "path": "database/migrations/007-canvas-imports.sql",
+      "size": 661,
+      "sha256": "b07e97f1e5b47aa4550e608d7284d2c4dca925037d66bc28e650cedcaab054c3",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/007-canvas-imports.sql"
+      }
+    },
+    {
+      "path": "database/migrations/008-product-sets.sql",
+      "size": 909,
+      "sha256": "c72fcf32efb1f79b839553a6d3175f1b61a5a8b48b8bd5e05d025a4bdf644066",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/008-product-sets.sql"
+      }
+    },
+    {
+      "path": "database/migrations/009-product-catalog-selections.sql",
+      "size": 474,
+      "sha256": "efdcf2b70482ad1999aa379fae5d5fae0eec79fc348ecc8a72631682ae9bb677",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/009-product-catalog-selections.sql"
+      }
+    },
+    {
+      "path": "database/migrations/010-product-set-category.sql",
+      "size": 898,
+      "sha256": "7fb6972cf91c8f83c2356d1a484a759ec90418f783dbf373688276411b8245e3",
+      "source": {
+        "kind": "installation",
+        "path": "server/database/migrations/010-product-set-category.sql"
+      }
+    },
+    {
+      "path": "desktop/使用说明.txt",
+      "size": 8988,
+      "sha256": "f30f66622550f7b34723702c1ef71d039d8d28b0e9186b52bfb4cfce97ba5f59",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/使用说明.txt"
+      }
+    },
+    {
+      "path": "desktop/branding/logo-source.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb",
+      "source": {
+        "kind": "installation",
+        "path": "logo-transparent.png"
+      }
+    },
+    {
+      "path": "desktop/branding/README.md",
+      "size": 254,
+      "sha256": "7aae3ec79c2e83e6b5c481ef11b0635704f9525675d1cc43f9d58deb5221e345",
+      "source": {
+        "kind": "publication-integration",
+        "original": {
+          "kind": "git",
+          "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+          "path": "desktop/branding/README.md"
+        },
+        "originalSha256": "b39fda576c089d15ac62462d4ac2a654f1d81ea28cede9d5246515e49fb56f8d"
+      }
+    },
+    {
+      "path": "desktop/branding/workbench.ico",
+      "size": 41468,
+      "sha256": "6f582e3f3e6837abe23104d0aa824d43511f7686968aa0a46e4ba85cebfe3ac9",
+      "source": {
+        "kind": "installation",
+        "path": "workbench.ico"
+      }
+    },
+    {
+      "path": "desktop/Directory.Build.props",
+      "size": 312,
+      "sha256": "b7a66e2e3a05326f593a4daed049adb1268b15583e5d5f7f8894ceab03890375",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/Directory.Build.props"
+      }
+    },
+    {
+      "path": "desktop/global.json",
+      "size": 98,
+      "sha256": "c6299be7b68fd085edeb0dd30fe05f8a717b0863172c8e18520cda0622c8e835",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/global.json"
+      }
+    },
+    {
+      "path": "desktop/start-service.ps1",
+      "size": 904,
+      "sha256": "31a0ba25a12dbb3a4e11bbe17fc0f1392bef5441ec94088629538ecd3f172f54",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/start-service.ps1"
+      }
+    },
+    {
+      "path": "desktop/WindowChrome.cs",
+      "size": 13591,
+      "sha256": "be33a11d8d6750cf8d5566a29d2356ce1014e3e583d3420de08c45921c8d2157",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/WindowChrome.cs"
+      }
+    },
+    {
+      "path": "desktop/Workbench.cs",
+      "size": 14890,
+      "sha256": "33a2ef9177218fe7641aafa6fc4b601ad9a64c3592983ed493d2898e10d287ae",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/Workbench.cs"
+      }
+    },
+    {
+      "path": "desktop/Workbench.csproj",
+      "size": 1696,
+      "sha256": "03dd0b1fd004bde3ef10db9a27059fad05c88de863bbb1c572973dfd7cfd18aa",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "desktop/Workbench.csproj"
+      }
+    },
+    {
+      "path": "docs/release-0.1.18-custom.md",
+      "size": 917,
+      "sha256": "0cd9fca190937f0395186edae65048c9436b056aa4afe509e762ec716c36889e",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": "frozen-web-manifest.json",
+      "size": 3649,
+      "sha256": "6d0f45d1bb821eed6389fcf1eea28922c5e8de7c30baed40c22d315a4d271f35",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": "frozen-web/assets/AssetLibrary-UTTBM2BB.js",
+      "size": 12222,
+      "sha256": "ec7c87fcddcee96c34f5e9b6ceb2249f1b3c0c7e7d07bf9c6fa1a24ceffa2aaf",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/AssetLibrary-UTTBM2BB.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/brand-logo-B91fdHS5.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/brand-logo-B91fdHS5.png"
+      }
+    },
+    {
+      "path": "frozen-web/assets/brand-logo-VPOZNAJ5.png",
+      "size": 821528,
+      "sha256": "b06cbb34beeb7acdc54b3abacf69abea9b6ad9afd9bb9a714a252372723e9dfb",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/brand-logo-VPOZNAJ5.png"
+      }
+    },
+    {
+      "path": "frozen-web/assets/CanvasImportModal-MYVPZHVQ.js",
+      "size": 14906,
+      "sha256": "a499497b43cc21779c9d80f3d918c8fd4b286c1dfe66aee0e99ac55248970708",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/CanvasImportModal-MYVPZHVQ.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-2EZQCH7D.js",
+      "size": 437285,
+      "sha256": "93e241f7e2e21c07b2967381ad37ef84a9e985a71226eb3a06c2a26ce744e005",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-2EZQCH7D.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-7S6E6DJI.js",
+      "size": 5784,
+      "sha256": "d9993efcbb8eebbfa808fa88ae4046b5d5323cc5e50b1dc6884e01cf92c40a15",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-7S6E6DJI.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-BXU24HGY.js",
+      "size": 1713,
+      "sha256": "9b439cb912d6b159a9f1977fb8eb5b3f4942400043f28eb9c8dff691ad0a5d28",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-BXU24HGY.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-H5JB2IC7.js",
+      "size": 1202,
+      "sha256": "cb17888be4d6b5efce47133a6c7a63553abd887a840da2aca637bd72e3f9fac5",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-H5JB2IC7.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-IXLNIG2N.js",
+      "size": 16081,
+      "sha256": "33f1097d06bcbc90d6049a7e84249527c5ed587972286774c83389a934b07e24",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-IXLNIG2N.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-J5CKUAFT.js",
+      "size": 4700,
+      "sha256": "b459bb4a5d3b25a7e42bf93fa421bc877d2d4032f1ab6a38510d0da0dfe6aadb",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-J5CKUAFT.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-OCKDIJSC.js",
+      "size": 5280,
+      "sha256": "7d50fbf382873de5bc34c3d716418b67ea08ae57c67ae858256d4768d63d43f6",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-OCKDIJSC.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-P2FYKYUC.js",
+      "size": 4363,
+      "sha256": "80d37420487887327529947dbfce2b758e5d135bbb73c2b4330f5170c45ebbfc",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-P2FYKYUC.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-SNJ27PKF.js",
+      "size": 1164,
+      "sha256": "e711b4dfb1ddb9bd6883e032c37ce1dadec1cade4957b95e6472a3b9c6537cf9",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-SNJ27PKF.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/chunk-VNCJXXIL.js",
+      "size": 1272,
+      "sha256": "b453369cd5f32fd975accd2e29505dd9704403023b0c36d683671c1f36d6b7db",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/chunk-VNCJXXIL.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/History-TQXNJGGJ.js",
+      "size": 2336,
+      "sha256": "65f9114dac905514b4f7b1c5cfdad3f4fd32ab38550d778e9792def5373dbc1a",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/History-TQXNJGGJ.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/ProductCatalog-KLVOBKTS.js",
+      "size": 15421,
+      "sha256": "0703ed13c0777bcb7d985200d3302ce12f7c3b167c3308454e22d8a09024813d",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/ProductCatalog-KLVOBKTS.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/Settings-BJSBYFFB.js",
+      "size": 16316,
+      "sha256": "021a22a034250fe4dca988ce3320e8475f7348b25848288036d7b9e8233fd66d",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/Settings-BJSBYFFB.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/SkillLibrary-OJRJ6R6Y.js",
+      "size": 12155,
+      "sha256": "bc2299fdac26ce49da8d330f73f1082dee2312edeea8a85cfd8dadf1b217ba3b",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/SkillLibrary-OJRJ6R6Y.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/TaskResult-PIKRLFPH.js",
+      "size": 16574,
+      "sha256": "972d0cf2ca9f3249f5df2d5038f03fa9a7cc987af4e90a6eb1ea6442c092c16c",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/TaskResult-PIKRLFPH.js"
+      }
+    },
+    {
+      "path": "frozen-web/assets/workbench-apple-3277290993.css",
+      "size": 94888,
+      "sha256": "32772909934e19bef5a358c5fdf2d2d1d5bddd5809c1d32ec98e5126dec5cae0",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/workbench-apple-3277290993.css"
+      }
+    },
+    {
+      "path": "frozen-web/assets/workbench-apple-34e6ef8f63.js",
+      "size": 237247,
+      "sha256": "34e6ef8f6305ab78be9cbc25ee39d5290795894be5571536210a477a9c04ab3e",
+      "source": {
+        "kind": "installation",
+        "path": "web/assets/workbench-apple-34e6ef8f63.js"
+      }
+    },
+    {
+      "path": "frozen-web/index.html",
+      "size": 474,
+      "sha256": "f64fc1278a63ba3633df423204d7c6c05cf964d080d16c4c9abc0bf5900067f7",
+      "source": {
+        "kind": "installation",
+        "path": "web/index.html"
+      }
+    },
+    {
+      "path": "NOTICE.md",
+      "size": 912,
+      "sha256": "cdbbb301e967ad472a05e75ff3aa93a0034f6595dcd008705f38eeffc21e6bbf",
+      "source": {
+        "kind": "publication-integration",
+        "original": {
+          "kind": "git",
+          "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+          "path": "NOTICE.md"
+        },
+        "originalSha256": "de4df74928ce250cc7c6c7a43d2e175d17d45bee14bb6721fab322bd76f6eebb"
+      }
+    },
+    {
+      "path": "Open-Workbench.cmd",
+      "size": 117,
+      "sha256": "5bacdfef6db188292240dde18946b1794c0764889f14244b562d1f9767df7f56",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "Open-Workbench.cmd"
+      }
+    },
+    {
+      "path": "package-lock.json",
+      "size": 132019,
+      "sha256": "e23aad57e3a8b1512887244f3edb5ed2e01662768fcb086bfa844b13842e6be8",
+      "source": {
+        "kind": "installation",
+        "path": "server/package-lock.json"
+      }
+    },
+    {
+      "path": "package.json",
+      "size": 1317,
+      "sha256": "e95883092cdb3ce4f7a81de87b5e27466f34dd0dfce69f7e7ff08b23bd5bef56",
+      "source": {
+        "kind": "publication-integration",
+        "original": {
+          "kind": "installation",
+          "path": "server/package.json"
+        },
+        "originalSha256": "62a60765586706836deacd8d812746ccdae6ea997020acc6c072d42d880bf250"
+      }
+    },
+    {
+      "path": "packages/canvas/cli.ts",
+      "size": 3473,
+      "sha256": "a8edc2854519eddd3a1c3a45b92d6a61ca9d921e438b454f9d977eb745e00071",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/cli.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/contracts.ts",
+      "size": 1855,
+      "sha256": "1335b546316d9c26b3ef024967faa0a4146e94f0c2c2cb7efd5095405f13f67d",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/contracts.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/import-service.ts",
+      "size": 18220,
+      "sha256": "d8cbe6e09b4f8087ed9bd2c15710cb360990a26b86c5dad4b12dc2ef9e686067",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/import-service.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/layout.ts",
+      "size": 5979,
+      "sha256": "118b7c66a752a385401d935a8b4510fba5d7a6c945cd3259a0a681cda4b09ef0",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/layout.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/planner.ts",
+      "size": 9082,
+      "sha256": "a506a9a26eeb9e8efe00e2e2217f99abf5d365248fea98796da97539ec2c2b05",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/planner.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/product-records.ts",
+      "size": 2583,
+      "sha256": "0c36e4c40450d6d5cbb485258a9ad222c5e0d7636a51469ea4387296b8dc2abf",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/product-records.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/prompt.ts",
+      "size": 421,
+      "sha256": "46049e8f2a9276d46fd940099fad3a1662f516b8214144031c19f82d5c079c51",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/prompt.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/vmnh-client.ts",
+      "size": 12838,
+      "sha256": "e40ce4421fece5a4ffac56623e529e240d75c5c58118db8adcce8fe481c489ea",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/vmnh-client.ts"
+      }
+    },
+    {
+      "path": "packages/canvas/vmnh-import-service.ts",
+      "size": 13968,
+      "sha256": "ff582f25d1230ca5f3ade2a03d6c94bbb54c04d0ec8c98efad9732734b348f2a",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/canvas/vmnh-import-service.ts"
+      }
+    },
+    {
+      "path": "packages/contracts/catalog-selection.ts",
+      "size": 1316,
+      "sha256": "8e1f679347dfdb079ea52461382090880ad5fe606e7f5cf2a63cf823db3e43b1",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/contracts/catalog-selection.ts"
+      }
+    },
+    {
+      "path": "packages/contracts/index.ts",
+      "size": 8880,
+      "sha256": "6b392f0a6ad2daca1b5f800c458de13853c04b4dddf5bf40f1897192ac17b12d",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/contracts/index.ts"
+      }
+    },
+    {
+      "path": "packages/contracts/product-catalog.ts",
+      "size": 1210,
+      "sha256": "560f4993fb2fd9b414847475158af78cb5a1b3b93ddbbb16cee06fe5512508f8",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/contracts/product-catalog.ts"
+      }
+    },
+    {
+      "path": "packages/domain/planning.ts",
+      "size": 5713,
+      "sha256": "c8183ae4054d98905f018b06899fb02d669f39837771bafdf9e6896239415061",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/planning.ts"
+      }
+    },
+    {
+      "path": "packages/domain/product-groups.ts",
+      "size": 1247,
+      "sha256": "0d48a58168037a59b89cc12f3770bed26d5a23f67913263d2042c5c2544bc41c",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/product-groups.ts"
+      }
+    },
+    {
+      "path": "packages/domain/references.ts",
+      "size": 1106,
+      "sha256": "627452c9b76100510a3b05d8384db3e3fda13836a6c533c31aa9fe5b43036226",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/references.ts"
+      }
+    },
+    {
+      "path": "packages/domain/skill-import.ts",
+      "size": 6153,
+      "sha256": "d0c46751836f6151330a24311f4ed609afa5f4263b92c3e966f9a9a77629db5a",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/skill-import.ts"
+      }
+    },
+    {
+      "path": "packages/domain/skill-preview.ts",
+      "size": 1101,
+      "sha256": "81b917047a4243b5efa9f1d04acfdac6f8a2e03636a31d5c76a47f3ad2e87b12",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/skill-preview.ts"
+      }
+    },
+    {
+      "path": "packages/domain/skill-requirements.ts",
+      "size": 1463,
+      "sha256": "987e7893b7d208553533a9c7207231261b0d7338c72c65719f12905d9a273ed9",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/skill-requirements.ts"
+      }
+    },
+    {
+      "path": "packages/domain/task-canvas-status.ts",
+      "size": 1758,
+      "sha256": "6bb7c52808e667cdef4798cb8e310b896acc0d6f5ce5a98546bd87b6c078675c",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/task-canvas-status.ts"
+      }
+    },
+    {
+      "path": "packages/domain/task-progress.ts",
+      "size": 1651,
+      "sha256": "002a363b34aafa199f0c13d07db2f160c757a1dbde8d14e00d88311e2ae7ccc4",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/domain/task-progress.ts"
+      }
+    },
+    {
+      "path": "packages/providers/config.ts",
+      "size": 5924,
+      "sha256": "1298fb9d274c6181b9938b00c30fc53d1400ea87057e95a239af33b2e55e00c4",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/config.ts"
+      }
+    },
+    {
+      "path": "packages/providers/display-effect-policy.ts",
+      "size": 4032,
+      "sha256": "a3fcc6f27f3d2297f19c3ae4820be5ef288e6f641c1c75f7313c2f00538b0832",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/display-effect-policy.ts"
+      }
+    },
+    {
+      "path": "packages/providers/image.ts",
+      "size": 3177,
+      "sha256": "e6786c039ec3a666cb8e24fe3fa91b4d424a463cf26c1235303ad2ab7d374fcf",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/image.ts"
+      }
+    },
+    {
+      "path": "packages/providers/network.ts",
+      "size": 7966,
+      "sha256": "4bd6efded603e9fd5a9dceeb60db23ce701f98a44f563d6f5c0f716cd9c7ba9f",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/network.ts"
+      }
+    },
+    {
+      "path": "packages/providers/system-proxy.ts",
+      "size": 2277,
+      "sha256": "196e97779d3a70558718712e16c5431491e8548725bd7241be3eb43ae77fb976",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/system-proxy.ts"
+      }
+    },
+    {
+      "path": "packages/providers/text.ts",
+      "size": 7812,
+      "sha256": "f3aed9e90786ab05738ccf933b5d8a7a06d61bda2b0efd18f3dfc06c6f9abd1c",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/text.ts"
+      }
+    },
+    {
+      "path": "packages/providers/vision-input.ts",
+      "size": 1795,
+      "sha256": "db03fed6261024b1b3b7aceccd252feaf4a311c43afc58e15fb91e9638d84056",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/providers/vision-input.ts"
+      }
+    },
+    {
+      "path": "packages/storage/backup.ts",
+      "size": 5160,
+      "sha256": "1df2227297305fc0cebca3d64be87ff3e34108f462b80745efa923bde9efd450",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/storage/backup.ts"
+      }
+    },
+    {
+      "path": "packages/storage/database.ts",
+      "size": 1415,
+      "sha256": "74ea1639d55bdc757d6f84ab5419cc9b30a5b8f77b44d0c55a92608d8f68a334",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/storage/database.ts"
+      }
+    },
+    {
+      "path": "packages/storage/export-bundle.ts",
+      "size": 4702,
+      "sha256": "39aea9a40de3e7d0e592bec0f4561f1b0bf7dfff614fdbfe5e0c5a44b659d403",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/storage/export-bundle.ts"
+      }
+    },
+    {
+      "path": "packages/storage/private-files.ts",
+      "size": 3142,
+      "sha256": "0063302d35c566c9fbd513ea27b97578ec4cd533929a86ce501884aabd73ef36",
+      "source": {
+        "kind": "installation",
+        "path": "server/packages/storage/private-files.ts"
+      }
+    },
+    {
+      "path": "playwright.config.ts",
+      "size": 1174,
+      "sha256": "62cc8f5600ffef6939b847b666f7696d0f077c08a69c8cabdca591228f36511e",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "playwright.config.ts"
+      }
+    },
+    {
+      "path": "README.md",
+      "size": 3164,
+      "sha256": "f8d093859cd87da30024c0aeeacf10df63fb44affb928702cc59d284b4ef5c7a",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": "scripts/backup.ts",
+      "size": 768,
+      "sha256": "71970c74ca766158e5062002b0caf4ef9889171dec4151882c50a9494b38f66d",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/backup.ts"
+      }
+    },
+    {
+      "path": "scripts/build-native.ts",
+      "size": 2311,
+      "sha256": "07d180ef86e093d19fa02d0cc85c1eeaed1ebee55ee26604676ddf9f4d5a6460",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/build-native.ts"
+      }
+    },
+    {
+      "path": "scripts/desktop-service.ts",
+      "size": 2358,
+      "sha256": "0c3acd5340a58be9e63de5e1ec575ca6d5a4e29bfd552e1e26ecf944d5c6232e",
+      "source": {
+        "kind": "installation",
+        "path": "server/scripts/desktop-service.ts"
+      }
+    },
+    {
+      "path": "scripts/draft-preservation.ts",
+      "size": 1517,
+      "sha256": "f744b7baf04fb74afeff972a40d4481a2bca957191f2fab9dd07cd030b457e3e",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/draft-preservation.ts"
+      }
+    },
+    {
+      "path": "scripts/e2e-server.ts",
+      "size": 2652,
+      "sha256": "1f898107ca363d69cb0eacbc6e42c3b0959c00e4831bf0c6fe7229f7318aa304",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/e2e-server.ts"
+      }
+    },
+    {
+      "path": "scripts/launch.ps1",
+      "size": 2415,
+      "sha256": "1c29ebd7f2c82e040d84076b0b1dce9de72085478506a9076540a08c075d50bd",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/launch.ps1"
+      }
+    },
+    {
+      "path": "scripts/local.ts",
+      "size": 1836,
+      "sha256": "7753a860058535813697b525b3484ee78f67aad9846c5e48ac80cf95e70b9005",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/local.ts"
+      }
+    },
+    {
+      "path": "scripts/package-windows.ts",
+      "size": 6205,
+      "sha256": "d7b53535646f43e78264f55d43b19f2fab1603f62ec2c8a4a0068bcc4200a647",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/package-windows.ts"
+      }
+    },
+    {
+      "path": "scripts/postgres.ts",
+      "size": 5784,
+      "sha256": "a2afd9fd182f2d7e13878435316974a9fba95de7ee9805f49253e60185384f74",
+      "source": {
+        "kind": "installation",
+        "path": "server/scripts/postgres.ts"
+      }
+    },
+    {
+      "path": "scripts/preserved-ui.mjs",
+      "size": 3324,
+      "sha256": "c6c0e3caf933fe875a1c271e8088cd74cdc1a139c7f4aa3d11329c431c32ae5b",
+      "source": {
+        "kind": "publication-integration"
+      }
+    },
+    {
+      "path": "scripts/preview-ui.ts",
+      "size": 10532,
+      "sha256": "de18587d1368ccc17d515b46fbec38460a1e4824e1a1c0e05c88672d8fc02f0c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/preview-ui.ts"
+      }
+    },
+    {
+      "path": "scripts/public-release-safety.ts",
+      "size": 3004,
+      "sha256": "79a7cb0f47cadabb34fc5bd20bc62c635380541233beb1cf4c343a893d7f65c6",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/public-release-safety.ts"
+      }
+    },
+    {
+      "path": "scripts/run.mjs",
+      "size": 2536,
+      "sha256": "89558fb56b2027ab837c84616901e8ad0a2e3c1f24b41888873b9b6d044a560d",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/run.mjs"
+      }
+    },
+    {
+      "path": "scripts/service-child.ts",
+      "size": 1230,
+      "sha256": "56df355ad94d3e0020d80f17da365ea1a4d2e520c25016c48657f9160f80137e",
+      "source": {
+        "kind": "installation",
+        "path": "server/scripts/service-child.ts"
+      }
+    },
+    {
+      "path": "scripts/service-shutdown.ts",
+      "size": 2437,
+      "sha256": "44023f6396177a137f9ae6ac8dee083ba39c1595c983a532e8c4c5e5feb617db",
+      "source": {
+        "kind": "installation",
+        "path": "server/scripts/service-shutdown.ts"
+      }
+    },
+    {
+      "path": "scripts/smoke-local.ts",
+      "size": 1418,
+      "sha256": "33190f9bfb3a3f6ef92f7d6ad927294e35b12be04e7b782c3b15b2b073c410e1",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/smoke-local.ts"
+      }
+    },
+    {
+      "path": "scripts/test-native.ps1",
+      "size": 727,
+      "sha256": "1d311808cf7f7208d40515632a60caeabd6502f951d258eb40951de2fd154afb",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/test-native.ps1"
+      }
+    },
+    {
+      "path": "scripts/test-runner.ts",
+      "size": 1506,
+      "sha256": "f3c964f6a90a7987dfbe9593405f49d1ed76725d0d45b84aa10995a22981b261",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/test-runner.ts"
+      }
+    },
+    {
+      "path": "scripts/upload-qa.ts",
+      "size": 636,
+      "sha256": "90d3a97cce85205a82dfab984879efbdcffb4e4a9d39cc09c8f27a7551eb4710",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "scripts/upload-qa.ts"
+      }
+    },
+    {
+      "path": "scripts/windows-package.ts",
+      "size": 1953,
+      "sha256": "1015ee6c5c2d0c400a7af55caabb5405d7707fdfa8358ebac783cc9ca5334695",
+      "source": {
+        "kind": "installation",
+        "path": "server/scripts/windows-package.ts"
+      }
+    },
+    {
+      "path": "tests/contracts/multi-product-provider.test.ts",
+      "size": 5618,
+      "sha256": "6a265d8d2a02692f3d34df593944d93acc42cd9d280436a2f7dc1e12a53ab917",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/contracts/multi-product-provider.test.ts"
+      }
+    },
+    {
+      "path": "tests/contracts/provider-timeout.test.ts",
+      "size": 3866,
+      "sha256": "083e411bb44decdd658d95aa717553993115b4d321ab99df91b677636d871dbe",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/contracts/provider-timeout.test.ts"
+      }
+    },
+    {
+      "path": "tests/contracts/providers.test.ts",
+      "size": 7066,
+      "sha256": "bb6e10d710993c11937b644e339d3644e02265ea5e401ea8f0df0a11b3723ae3",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/contracts/providers.test.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/canvas-import.spec.ts",
+      "size": 10064,
+      "sha256": "ade94d276674c4c00c97d6b7038044ec48dd4f8220075cd7822acf58d8e449bf",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/canvas-import.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/canvas-upload-status.spec.ts",
+      "size": 5366,
+      "sha256": "fb892271e477eef820cf21c318feee4d38480138dc030e6364fd5b85125663db",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/canvas-upload-status.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/catalog-product-picker.spec.ts",
+      "size": 10820,
+      "sha256": "ba591303919a0847b3e6fbf71611d497a5fd5d6393cc69d7e4be25df7b676d44",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/catalog-product-picker.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/compact-skills.spec.ts",
+      "size": 2580,
+      "sha256": "0100991d54adc5310f760738074ab66ea572bdd4fcac5dedf826e776b802d715",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/compact-skills.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/creation-submit-safety.spec.ts",
+      "size": 6191,
+      "sha256": "8f884ec2e0e300168ccd64d82d65c5b677781abd18cb9123c0ef5c77bf9ea25b",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/creation-submit-safety.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/display-layout.spec.ts",
+      "size": 15819,
+      "sha256": "2444d614db8109e867e733eff88f4a56c02db05ccfaeeae50ca825cebe9d697a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/display-layout.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/fixtures.ts",
+      "size": 4108,
+      "sha256": "93be7698f8213e73b72010578f1a7691b10454da2f46335dff2a5f36ba71f8d9",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/fixtures.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/multi-product-sets.spec.ts",
+      "size": 15414,
+      "sha256": "5094c6b96adcfd2cae591bc04956283d9c91558933a5ad08fc76905dfccbe80c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/multi-product-sets.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/product-catalog.spec.ts",
+      "size": 13205,
+      "sha256": "ff6530c724e9a4216abc824c33b61be67990a8aacdb298d9c583b31fbe92419f",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/product-catalog.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/product-sets.spec.ts",
+      "size": 11757,
+      "sha256": "3ce60624a5d9eff2f42298d6a04b2417ee9f37c436a4becb44888868d360542c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/product-sets.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/provider-pools.spec.ts",
+      "size": 7014,
+      "sha256": "e9cff3be1c48cbeae5dd29b936d627a8776126984e34ec366ee7f04d6bfd8235",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/provider-pools.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/single-user.spec.ts",
+      "size": 7502,
+      "sha256": "1d0715b915dd6db0d5c54fa2c10d9335874b812f8275f7c1ded596ffbdff2c01",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/single-user.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/skill-preview.spec.ts",
+      "size": 10889,
+      "sha256": "6262ede040dd0a2e4044620867ffa9f55498cd414cc85f88ed9a3de5e5846d66",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/skill-preview.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/soft-controls.spec.ts",
+      "size": 1790,
+      "sha256": "48e749160ee4c883a52e0b541a7bb032956166a193a93e39f877a9829808d08f",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/soft-controls.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/task-board.spec.ts",
+      "size": 3860,
+      "sha256": "e4ca29ed6c5ad3c146edf0f225da487ab898fb1180297a477f19c79caaa751d6",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/task-board.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/task-unsaved.spec.ts",
+      "size": 13399,
+      "sha256": "0c7e67e37057baf319a8b27efb601c57ff5ef38fd937c7b550fc54e51218d6fc",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/task-unsaved.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/task-visuals.spec.ts",
+      "size": 13882,
+      "sha256": "6cec58cf403142ad255e2fc2a50177f83cfd3dbb4106636ea498c9a55d5fc2aa",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/task-visuals.spec.ts"
+      }
+    },
+    {
+      "path": "tests/e2e/workflow.spec.ts",
+      "size": 14925,
+      "sha256": "0122b2332fc057ad479425e6272f0b4fb23c133afd07013cc82052e51ddad8fa",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/e2e/workflow.spec.ts"
+      }
+    },
+    {
+      "path": "tests/fixtures/upload-qa.html",
+      "size": 218,
+      "sha256": "4eaac77f214e4aa46211553e88260fd375c04b3bf4f6e1d382ded89f9b92e341",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/fixtures/upload-qa.html"
+      }
+    },
+    {
+      "path": "tests/fixtures/upload-qa.tsx",
+      "size": 4106,
+      "sha256": "443bc56e6eabed588fa88853b6d20791f8dc5fc286dea4aba27d57803dbd437b",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/fixtures/upload-qa.tsx"
+      }
+    },
+    {
+      "path": "tests/helpers.ts",
+      "size": 1669,
+      "sha256": "9bffbfd72ad98a4a27a0bb96e3d02d6193c766c37c0cc87ba3b82c89845d416d",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/helpers.ts"
+      }
+    },
+    {
+      "path": "tests/helpers/display-playwright.config.ts",
+      "size": 1008,
+      "sha256": "245b8b92d6ac90ef89bc1a02c78b9ca7006a95a88183c831dc67387d34d50027",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/helpers/display-playwright.config.ts"
+      }
+    },
+    {
+      "path": "tests/integration/assets-export.test.ts",
+      "size": 6682,
+      "sha256": "25740d9947c8bc9f1828ae8454100b2da8363b89a5ca8e183bc1165a8f1df95c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/assets-export.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/auth.test.ts",
+      "size": 3418,
+      "sha256": "4431c043c54ca0c7c2211a3057315f25c1657eae472e948050f418837b743c85",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/auth.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/backup.test.ts",
+      "size": 3690,
+      "sha256": "87de96ad6f014856c743f7f54a7a96e9d054620e3bfa82365483af463fdfeb91",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/backup.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/binding-safety.test.ts",
+      "size": 4296,
+      "sha256": "e59999a6b89b03bc403a99e55ca3dd41cdba54693bb913ecd13f2b0fb6f2d298",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/binding-safety.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/canvas.test.ts",
+      "size": 26996,
+      "sha256": "586a73918820fe835a713500e1d52e6edc5fb9da3fffa3d63939c65c57cdca70",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/canvas.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/catalog-selection.test.ts",
+      "size": 13289,
+      "sha256": "281cba5a52b279c112249213902a7dd155d4b11690c014977363b5bc773ad264",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/catalog-selection.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/desktop-health.test.ts",
+      "size": 857,
+      "sha256": "8e37b7c860270d49f16c967feaa19bf20f4f1dcada8240b7f6e0ee38a88704b8",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/desktop-health.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/media.test.ts",
+      "size": 2272,
+      "sha256": "431f1466901edc76ecc299b4b2204e3fe67790ed9b7f36bbe2d7c955632cfe16",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/media.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/multi-product-sets.test.ts",
+      "size": 15196,
+      "sha256": "1f843d6bdfc13b1e46a9e0b1c17a0b2f48f8cdbb3fdc8450f3831a1d9182766e",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/multi-product-sets.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/postgres-startup.test.ts",
+      "size": 1207,
+      "sha256": "eb069f5dc7ac6205cb00026c98985c39abeccfc3b8adceb7a0ffbd0f45942d6e",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/postgres-startup.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/product-catalog.test.ts",
+      "size": 10029,
+      "sha256": "a391aafdfbe1f8b7d09d8a83796609968edcd2b00ca21d102483fbdfc23e03ba",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/product-catalog.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/product-sets.test.ts",
+      "size": 11137,
+      "sha256": "fe1888a4e04200681ad672409ab0e85cc293f3fbc94b0e1285d60ebd0dfb9aca",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/product-sets.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/provider-pools.test.ts",
+      "size": 7240,
+      "sha256": "0fdf8a769e249b3f85b493f35263f0afe08f207f3ff25757ce38064957f39601",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/provider-pools.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/revision-safety.test.ts",
+      "size": 5805,
+      "sha256": "d4c3a0e29eacba90960e0b294a45a02a0478d7a9b1a6575db3abb19f1a7410fd",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/revision-safety.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/single-user.test.ts",
+      "size": 6820,
+      "sha256": "dfe84a6f72db2bb5f5fab87b247c097a08654c3bc53281a73cee97f42e6084a6",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/single-user.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/skills.test.ts",
+      "size": 3768,
+      "sha256": "a23079c3227ddd0a6801609dc6e51caa4013a8bfa193127dd9641513707e18ed",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/skills.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/task-board.test.ts",
+      "size": 9266,
+      "sha256": "b9cbeb9a1022d853d3af1e6a9cda510809711d40c15f8cc3896d1d32458c0977",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/task-board.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/task-canvas-status.test.ts",
+      "size": 6311,
+      "sha256": "fe89e93bc44f7f72d4dfa3fb838f972deba4dd1ce19ea95fbf1789e660a5e89c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/task-canvas-status.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/task-skill-previews.test.ts",
+      "size": 9802,
+      "sha256": "bd7d5f787a5689f4386c9d7066d5451808b1390e4d141cf579baa49196eeb71a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/task-skill-previews.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/tasks.test.ts",
+      "size": 7168,
+      "sha256": "59afd71133c22cad4b2bf42df4f0c62577042e0096013ab857e55db161e71fb5",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/tasks.test.ts"
+      }
+    },
+    {
+      "path": "tests/integration/worker-scheduling.test.ts",
+      "size": 11351,
+      "sha256": "e89827e853ebecf87239805f4e2bc5ed569b77f9d58c073771a5df3d98f74aaa",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/integration/worker-scheduling.test.ts"
+      }
+    },
+    {
+      "path": "tests/public-release.test.ts",
+      "size": 3977,
+      "sha256": "e5018e5ee5066dd0b701dcd93d3f89ad32f93e3169fd1edc944fe9756f58b9e9",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/public-release.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/branding.test.ts",
+      "size": 1652,
+      "sha256": "a3080eb736d711e344e73298488820d8d0ba0356bdcc0a7860784a4829b40530",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/branding.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-drain.test.ts",
+      "size": 1294,
+      "sha256": "cfc0531087ca783a9428a4cfd5d11a51c8f9db5322f7b46eb72b46eb20f0f34b",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-drain.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-layout.test.ts",
+      "size": 4181,
+      "sha256": "ab38bfab6d02a6332648b081ccbc76e693e0d9ad25531a089fc1e0d1fe53a664",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-layout.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-origin.test.ts",
+      "size": 2168,
+      "sha256": "fc7f04e01e40fd5f201cbc7a27e8fd80c3dc325856b1a1f4e4a1c4a7fe64cfbd",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-origin.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-plan.test.ts",
+      "size": 8898,
+      "sha256": "3d81ce2786324d6551b0ad9feb2eb5cd04f34812f462613f17461a354c85258e",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-plan.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-product-records.test.ts",
+      "size": 6086,
+      "sha256": "4b3f331ae5279ab00fa81fe3d595f20fcf5e37347b9759786f0ebb3c8f6e8dea",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-product-records.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/canvas-prompt.test.ts",
+      "size": 2678,
+      "sha256": "380f570cc8a52fad6e0cf43644e4bdc6e9d38c6d9758150209fcfcf290d68a6c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/canvas-prompt.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/catalog-generation-boundary.test.ts",
+      "size": 1316,
+      "sha256": "2e32a4c7a138031743b10b0ecbf0dd4a870f6cfab4e0462f38475b207f2e8af6",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/catalog-generation-boundary.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/catalog-identity-summary.test.ts",
+      "size": 1728,
+      "sha256": "8e58ee1c262220f0a502ac906623fcae442075345d029d15971714811b5837e6",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/catalog-identity-summary.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/catalog-product-choice.test.ts",
+      "size": 3664,
+      "sha256": "ed88e2feb3d9d3dabfbb5ff0104223ccf3a569ce676787ca34c7ef7ae6b91537",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/catalog-product-choice.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/draft-preservation.test.ts",
+      "size": 1550,
+      "sha256": "726cf5c1fd8544c033642f4961d5a30dc17b060b54659c834712fb599ac5adb2",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/draft-preservation.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/file-upload.test.ts",
+      "size": 3660,
+      "sha256": "134dfddc47b0bfecaa78416f58757170fc256960c1f0709e0c2c1a395f775e28",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/file-upload.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/multi-product-references.test.ts",
+      "size": 3042,
+      "sha256": "020a823c488fc69f3345da06e8d40525cc72abe54c555b1b84994b8cfdf2f1ec",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/multi-product-references.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/preview-ui.test.ts",
+      "size": 2128,
+      "sha256": "b409c8375d2cb981831ac29bd01b0368f2eee45f3925fb5db04e95a5a2680964",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/preview-ui.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/product-catalog-store.test.ts",
+      "size": 4142,
+      "sha256": "c3cd8139a39360f080d5855c38f854d4a0ad12d7c6cf99e57dc2e06ad3e82249",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/product-catalog-store.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/product-set-selection.test.ts",
+      "size": 8651,
+      "sha256": "ab5fb2b1ed9283a53db089af6a5f9a17c53cef125158d61031fb01ed569c7ed7",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/product-set-selection.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/provider-network.test.ts",
+      "size": 7228,
+      "sha256": "8c1ddbf19fc6f69e656316fc7f0db057407e3fba7b87e6ecc5bfbdab639a0e60",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/provider-network.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/provider-pool-ui.test.ts",
+      "size": 3007,
+      "sha256": "9bd7b97f7ad9ae07245363a219b59dd53ac49ca568b3fa0107ace77240f45c2d",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/provider-pool-ui.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/provider-safety.test.ts",
+      "size": 2287,
+      "sha256": "41ad68e46cc4ef2a2fb5bf916aeca26d43507109c5d6c8d73c4fbb574c6fbbe0",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/provider-safety.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/references.test.ts",
+      "size": 887,
+      "sha256": "50fba1a6b53cc23550fe719075afdef1ccf6e738e8b643239e5437bb69121e34",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/references.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/result-prompt-document.test.ts",
+      "size": 5646,
+      "sha256": "bed8ffef052afd2dab5d382eb7ba8836188a6061af69ef6494f421baf2245efe",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/result-prompt-document.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/security-dependency-baseline.test.ts",
+      "size": 1837,
+      "sha256": "bd2b184dee6a623832d1b19803a7626a046d8736695f316130876db1b2c39819",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/security-dependency-baseline.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/selection.test.ts",
+      "size": 3170,
+      "sha256": "3a849b08c5971d07515d2320c662cbe85dca6107d955ab5e2d86d265d85c8559",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/selection.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/service-shutdown.test.ts",
+      "size": 4927,
+      "sha256": "1b6c4abe15a8d4b091e3d309b58b82d0957ee049d737d70067f10892b5d1155d",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/service-shutdown.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/skill-import.test.ts",
+      "size": 2499,
+      "sha256": "2bc52dac9d0c9c055a2c8797434b8e7233ab4e6bd7e7f85ed34f018efb3c9dc8",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/skill-import.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/skill-preview.test.ts",
+      "size": 2582,
+      "sha256": "cc27ee3f653f407a203ef2ac9859b3e4f2a814135de384820ed7621218b5ec3a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/skill-preview.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/skill-requirements.test.ts",
+      "size": 2211,
+      "sha256": "ee2767627330f267ef6bbdc415ac3f7e1904b462e6150b97e27854c2272b3d1a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/skill-requirements.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/system-proxy.test.ts",
+      "size": 2766,
+      "sha256": "de1e3dff82d44e48afdcc0de53a177bdf5125bce1c23d1cfb96b48e7c96f867a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/system-proxy.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/task-canvas-status.test.ts",
+      "size": 2628,
+      "sha256": "06abb7dc0f13352e3248d93b11f81483ef9f2c949f5dd33fc6ddfccfd25abb2c",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/task-canvas-status.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/task-card-render.test.ts",
+      "size": 5662,
+      "sha256": "205b599ce20918ce7baf03230f7ba5b754b5ce0b05f908d2436ceb636e7455b2",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/task-card-render.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/task-display-status.test.ts",
+      "size": 1308,
+      "sha256": "931ea3ada615fda41e55729ccb1f35d3a40ed3aa72388a25ba0b65426e88f8fd",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/task-display-status.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/task-progress.test.ts",
+      "size": 2779,
+      "sha256": "75548150aad8792916a537b3a983abce66fff411959b535de75860ded32ad1cc",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/task-progress.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/vision-input.test.ts",
+      "size": 2596,
+      "sha256": "169d5b984a1867eac2fa576f6b3ae60a171b5744ba2abe51b1732b354f7b5373",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/vision-input.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/windows-package.test.ts",
+      "size": 3335,
+      "sha256": "7c237ee891f8d0d66d8bd9c151ee4532b272ee5759394a6dc5e57f80eac8e05f",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/windows-package.test.ts"
+      }
+    },
+    {
+      "path": "tests/unit/worker-pool.test.ts",
+      "size": 2184,
+      "sha256": "eda2dd82e982f6636ee2b27022cef78d8e59452684eda57908e735ca695a2772",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/unit/worker-pool.test.ts"
+      }
+    },
+    {
+      "path": "tests/windows-host.cs",
+      "size": 6138,
+      "sha256": "17d4769bceee5eb3727c4856d4cb6071f8eddc087f6e581a913f61f341c7c187",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tests/windows-host.cs"
+      }
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "size": 2532,
+      "sha256": "9240b6596e52c403a5930c3699bbd592ca8a168e7697729f32d657aa5994fabb",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "THIRD-PARTY-NOTICES.md"
+      }
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 459,
+      "sha256": "e6d13f221f88f9a6cac137519978f756548a413fbc8dc167a08e87dc44f56e65",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "tsconfig.json"
+      }
+    },
+    {
+      "path": "vitest.config.ts",
+      "size": 357,
+      "sha256": "d9372f42d83f66e8766597e363f40e7a7e5fe57667f266315dddb7eb7e259b6a",
+      "source": {
+        "kind": "git",
+        "revision": "f9fe18ca2002a0cfe3ec11253af718637e49fb99",
+        "path": "vitest.config.ts"
+      }
+    }
+  ]
+}

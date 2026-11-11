@@ -1,0 +1,36 @@
+.modal.style-picker{width:min(43.5rem,calc(100vw - 2rem));height:75dvh;min-height:min(26rem,calc(100dvh - 1.5rem));max-height:calc(100dvh - 1.5rem);padding:1.25rem;overflow:hidden;box-sizing:border-box}
+.modal.style-picker[open]{display:flex;flex-direction:column;gap:.875rem}
+.modal.style-picker>header{flex:none;align-items:center;margin:0;gap:.75rem}
+.modal.style-picker>header h2{font-size:1.25rem;white-space:nowrap;line-height:1.3}
+.modal.style-picker>header>.icon-button{display:none}
+.style-picker-actions{display:flex;align-items:center;gap:.5rem;min-width:0;margin-left:auto}
+.style-picker-actions>span{font-size:.8125rem;color:var(--muted);white-space:nowrap;margin-right:.25rem}
+.style-picker-actions button,.style-picker-pagination button{min-height:2.5rem;padding:.375rem 1rem}
+.style-picker-content{flex:1;display:flex;flex-direction:column;gap:.75rem;min-height:0}
+.style-picker-toolbar{display:flex;align-items:center;gap:.75rem;flex:none}
+.style-picker-toolbar label{margin:0;font-size:.875rem;flex:none}
+.style-picker-toolbar select{min-height:2.625rem;width:12rem;max-width:65%;padding:.375rem .75rem;margin:0}
+.style-picker-total{margin-left:auto;font-size:.875rem;color:var(--muted);white-space:nowrap}
+.style-picker-stage{flex:1;min-height:0;overflow:hidden}
+.style-picker-grid{display:grid;height:100%;gap:12px}
+.style-picker-card{position:relative;display:flex;flex-direction:column;align-items:stretch;min-width:0;min-height:0;padding:0;overflow:hidden;text-align:left;white-space:normal;border-radius:.875rem;background:var(--paper);border:1px solid var(--line);gap:0}
+.style-picker-card.selected{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
+.style-picker-image{flex:1;min-height:0;width:100%;display:flex;align-items:center;justify-content:center;background:#f6f7fb;overflow:hidden}
+.style-picker-image img{width:100%;height:100%;min-height:0;display:block;object-fit:contain}
+.style-picker-image>span{font-size:.8125rem;color:var(--muted)}
+.style-picker-caption{flex:none;display:flex;align-items:baseline;justify-content:space-between;gap:.375rem;padding:.625rem .625rem .6875rem;min-width:0}
+.style-picker-caption strong{font-size:.9375rem;line-height:1.3;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.style-picker-caption>span{font-size:.75rem;line-height:1.3;font-weight:400;color:var(--muted);white-space:nowrap}
+.style-picker-order{position:absolute;top:.5rem;right:.5rem;border-radius:2rem;background:var(--accent);color:white;font-size:.75rem;font-weight:600;line-height:1.25rem;padding:.125rem .4375rem}
+.style-picker-selected{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.375rem;max-height:5rem;overflow:auto;flex:none}
+.style-picker-selected>li{display:flex;align-items:center;gap:.375rem;border:1px solid var(--line);border-radius:.625rem;padding:.125rem .25rem .125rem .5rem;font-size:.8125rem;background:var(--surface)}
+.style-picker-selected>li>span{white-space:nowrap}
+.style-picker-selected b{color:var(--accent);margin-right:.125rem}
+.style-picker-selected>li>div{display:flex;gap:.125rem}
+.style-picker-selected button{border:0;box-shadow:none;min-height:1.75rem;min-width:1.5rem;padding:0 .25rem;background:transparent;font-size:.875rem}
+.style-picker-pagination{flex:none;display:flex;align-items:center;gap:.5rem;padding-top:.625rem;border-top:1px solid var(--line)}
+.style-picker-pagination>span{margin-right:auto;color:var(--muted);font-size:.8125rem}
+.style-picker-empty{display:flex;height:100%;align-items:center;justify-content:center;font-size:.9375rem;color:var(--muted)}
+.style-picker-error{flex:none;display:flex;align-items:center;justify-content:space-between;gap:.5rem;max-height:4rem;overflow:auto;color:var(--danger,#ad3434);font-size:.8125rem}
+@media(max-width:540px){.modal.style-picker{padding:1rem;gap:.75rem}.style-picker-actions>span{display:none}.style-picker-actions button{padding:.375rem .75rem}.style-picker-caption{flex-direction:column;gap:.125rem;padding:.375rem .5rem}.style-picker-pagination button{padding:.375rem .5rem}.style-picker-pagination>span{font-size:.75rem}}
+@media(max-height:560px){.modal.style-picker{height:calc(100dvh - 1.5rem);min-height:0;padding:.875rem;gap:.5rem}.style-picker-content{gap:.5rem}.style-picker-selected{max-height:2.25rem}.style-picker-pagination{padding-top:.375rem}}
